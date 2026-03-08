@@ -25,7 +25,16 @@
         <ul id="header_ul">
             <li>
                 <a href="index.php" >Home</a>
-            </li>     
+            </li>
+            <li>
+                <a href="user_manager/index.php?controllerRequest=login_user">Login</a>
+            </li>
+            <li>
+                <a href="user_manager/index.php?controllerRequest=register_user">Register</a>
+            </li>
+            <li>
+                <a href="user_manager/index.php?controllerRequest=logout_user">Logout</a>
+            </li>   
         </ul>
         
     
