@@ -3,7 +3,7 @@
 class AncestorDb{
     public static function get_ancestors(){
         $db = Database::getDB();
-        $query = 'SELECT * FROM ancestors';
+        $query = 'SELECT * FROM ancestor';
         $result = $db->query($query);
         $ancestors = array();
         foreach($result as $row){
@@ -15,7 +15,7 @@ class AncestorDb{
 
     public static function get_ancestor_by_email_login($email, $password){
         $db = Database::getDB();
-        $query = 'SELECT * FROM ancestors WHERE email = :email AND password = :password';
+        $query = 'SELECT * FROM ancestor WHERE email = :email AND password = :password';
         $statement = $db->prepare($query);
         $statement->bindValue(':email', $email);
         $statement->bindValue(':password', $password);
@@ -32,7 +32,7 @@ class AncestorDb{
 
     public static function get_ancestors_by_family_tree_id($family_tree_id){
         $db = Database::getDB();
-        $query = 'SELECT * FROM ancestors WHERE family_tree_id = :family_tree_id';
+        $query = 'SELECT * FROM ancestor WHERE family_tree_id = :family_tree_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':family_tree_id', $family_tree_id);
         $statement->execute();
@@ -46,7 +46,7 @@ class AncestorDb{
 
     public static function get_ancestor_by_id($id){
         $db = Database::getDB();
-        $query = 'SELECT * FROM ancestors WHERE id = :id';
+        $query = 'SELECT * FROM ancestor WHERE id = :id';
         $statement = $db->prepare($query);
         $statement->bindValue(':id', $id);
         $statement->execute();
